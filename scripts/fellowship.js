@@ -42,13 +42,13 @@ const makeMiddleEarth = () => {
   // console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
-const $section = $("<section>")
-$section.attr("id", "middle-earth")
+  const $section = $("<section>")
+  $section.attr("id", "middle-earth")
 
   // 2. append the section to the body of the DOM.
-$("body").append($section)
+  $("body").append($section)
   // 3. use a for loop to iterate over the lands array that does the following:
-for (let index = 0; index < lands.length; index++){
+  for (let index = 0; index < lands.length; index++){
   const $article = $("<article>")
   $article.attr("id", lands[index])
   $article.html(`<h1>${lands[index]}</h1>`)
@@ -78,17 +78,17 @@ const makeHobbits = () => {
 const $ul = $("<ul>")
   // 2. make each hobbit an li element and append it to the 'ul' you just created
     // hint: use the given 'hobbits' array and use a for loop
-for (let index = 0; index<hobbits.length;index++){
+  for (let index = 0; index<hobbits.length;index++){
   const $li = $("<li>")
   $li.addClass("hobbit")
   $li.text(hobbits[index])
   $ul.append($li)
-}
+  }
   // 3. also, give each hobbit (`li`) a class of "hobbit"
 
   // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
-$("#The-Shire").append($ul)
+  $("#The-Shire").append($ul)
 };
 
 // COMMIT YOUR WORK
@@ -100,10 +100,10 @@ $("#The-Shire").append($ul)
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-const $div = $("<div>").attr("id", "the-ring")
+  const $div = $("<div>").attr("id", "the-ring")
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-$(".hobbit").eq(0).append($div)
+  $(".hobbit").eq(0).append($div)
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
 };
@@ -118,16 +118,16 @@ const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
 const $ul = $("<ul>")
-for (let index = 0; index<baddies.length;index++){
+  for (let index = 0; index<baddies.length;index++){
   const $li = $("<li>")
   $li.addClass("baddy")
   $li.text(baddies[index])
   $ul.append($li)
-}
+  }
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append the ul to Mordor
-$("#Mordor").append($ul)
+  $("#Mordor").append($ul)
 };
 
 // COMMIT YOUR WORK
@@ -140,11 +140,11 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
 const $aside = $("<aside>")
-$("#middle-earth").append($aside)
+  $("#middle-earth").append($aside)
 
   // 2. display an unordered list of buddies in the aside
-const $ul = $("<ul>")
-for (let index = 0; index<buddies.length;index++){
+  const $ul = $("<ul>")
+  for (let index = 0; index<buddies.length;index++){
   const $li = $("<li>")
   $li.addClass("buddy")
   $li.text(buddies[index])
@@ -154,7 +154,7 @@ for (let index = 0; index<buddies.length;index++){
   // 3. give each of the buddies a class of "buddy"
 
   // 4. don't forget to append them to the aside
-$("aside").append($ul)
+  $("aside").append($ul)
 };
 
 // COMMIT YOUR WORK
@@ -167,7 +167,7 @@ $("aside").append($ul)
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-$("#Rivendell").append($("#The-Shire").find("li"))
+  $("#Rivendell").append($("#The-Shire").find("li"))
 };
 
 // COMMIT YOUR WORK
@@ -180,7 +180,7 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
      // hint: You can get a list of elements by tag name, such as 'aside'
-
+     $(".buddy").eq(3).text("Aragorn")
 };
 
 // COMMIT YOUR WORK
